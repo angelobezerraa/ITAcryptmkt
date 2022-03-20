@@ -73,29 +73,25 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center justify-center w-full h-screen sm:flex-row sm:justify-evenly">
         <div className="order-2 sm:order-1">
           <h1 className="max-w-xl text-4xl font-semibold leading-tight text-white md:text-5xl">
-            Best NFTs are here!
+            As melhores NFTs você encontra aqui!
           </h1>
 
           <h4 className="mt-8 text-lg font-medium leading-relaxed text-gray-200 ">
-            You can find your favorite NFTs with good prices
+            Aqui você encontra NFTs com ótimos preços e ainda ajudar artistas a crescer!
           </h4>
-          <GlowButton onClick={executeScroll}>Explore Now</GlowButton>
-        </div>
-
-        <div className="order-1 w-3/4 md:w-1/2 sm:order-2">
-          <Lottie options={defaultOptions} />
+          <GlowButton onClick={executeScroll}>Explorar agora!</GlowButton>
         </div>
       </div>
 
       <section ref={nftsRef} className="container mx-auto mt-8 md:mt-2 scroll-mt-28">
         <h1 className="text-4xl font-semibold text-center ">
-          Latest <span className="text-primary">NTFs</span>
+          <span className="text-primary">NTFs</span> Recentes
         </h1>
         <div className="grid grid-cols-1 gap-10 py-8 md:grid-cols-2 lg:grid-cols-3">
           {NFTs && NFTs.length > 0 ? (
             NFTs.map((nft: MarketItem) => <NFTBuyCard key={nft.itemId} nft={nft} />)
           ) : (
-            <div>No NFTs in marketplace</div>
+            <div>Ainda não há nada para ver por aqui</div>
           )}
         </div>
       </section>

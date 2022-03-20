@@ -14,7 +14,7 @@ interface Props {}
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "My NFTs", href: "/myNFTs" },
+  { name: "MInhas NFTs", href: "/myNFTs" },
   { name: "Create NFT", href: "/createItem" },
 ];
 
@@ -48,7 +48,7 @@ export const Navbar = (props: Props) => {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Menu Principal</span>
                   {open ? (
                     <XIcon className="block w-6 h-6" aria-hidden="true" />
                   ) : (
@@ -57,22 +57,6 @@ export const Navbar = (props: Props) => {
                 </Disclosure.Button>
               </div>
               <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                <div className="flex items-center flex-shrink-0">
-                  <Link href="/">
-                    <img
-                      className="block w-8 h-8 cursor-pointer lg:hidden"
-                      src="/n-big.png"
-                      alt="N letter logo"
-                    />
-                  </Link>
-                  <Link href="/">
-                    <img
-                      className="hidden w-8 h-8 cursor-pointer lg:block"
-                      src="/n-big.png"
-                      alt="N letter logo"
-                    />
-                  </Link>
-                </div>
                 <div className="hidden sm:block sm:ml-12">
                   <div className="flex space-x-12">
                     {navigation.map((item) => {
@@ -90,13 +74,13 @@ export const Navbar = (props: Props) => {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 space-x-4 font-medium sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <Link href="/createItem">
-                  <button className="hidden font-medium md:block">Create NFT</button>
+                  <button className="hidden font-medium md:block">Adicionar NFT</button>
                 </Link>
                 {connectedAccount ? (
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="flex items-center max-w-xs px-4 py-2 text-white transition rounded-full bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-500 hover:bg-gray-700 shadow-homogen font-poppins">
-                        <span className="sr-only">Open user menu</span>
+                        <span className="sr-only">Abrir menu do usuário</span>
 
                         <div className="pr-2">
                           <WalletSvg className="w-5 h-5 text-white" />

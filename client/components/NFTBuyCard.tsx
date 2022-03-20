@@ -14,7 +14,7 @@ const NFTBuyCard = ({ nft }: Props) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative text-gray-200 shadow-homogen bg-background rounded-2xl">
+    <div className="text-gray-200 shadow-homogen bg-background rounded-2xl">
       <span className="absolute z-10 inline-flex items-center px-3 text-sm font-semibold text-white rounded-full bg-primary right-2 top-2">
         # <span className="pl-1 text-xl">{nft.itemId}</span>
       </span>
@@ -32,10 +32,10 @@ const NFTBuyCard = ({ nft }: Props) => {
           </p>
         </div>
         <div className="flex items-center space-x-2 justify-evenly">
-          <Button onClick={() => setOpen(true)}>Buy</Button>
+          <Button onClick={() => setOpen(true)}>Comprar</Button>
 
           <Link href={`/items/${nft.itemId}`} passHref>
-            <Button type="secondary">Details</Button>
+            <Button type="secondary">Detalhes</Button>
           </Link>
         </div>
       </div>
